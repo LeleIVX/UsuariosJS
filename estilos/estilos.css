@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#009473), color-stop(#008689), color-stop(#007692), color-stop(#21648b), color-stop(#475177), color-stop(#4e4969), color-stop(#50425b), color-stop(#4e3d4e), color-stop(#4b3e4b), color-stop(#483e48), color-stop(#443f44), to(#413f41));
+  background-image: linear-gradient(to top, #009473, #008689, #007692, #21648b, #475177, #4e4969, #50425b, #4e3d4e, #4b3e4b, #483e48, #443f44, #413f41);
+  background-size: cover;
+  height: 100vh;
+}
+
+.titulo {
+  font-family: "Creepster", cursive;
+  color: #009473;
+  font-size: 70px;
+  -webkit-text-stroke: 2px #C9BAA4;
+}
+
+form {
+  font-family: 'Oswald', sans-serif;
+  color: white;
+}
+
+form div {
+  padding: 5px;
+}
+
+form div label {
+  font-size: 20px;
+}
+
+.btn {
+  background-color: #443f44;
+  border-color: #009473;
+}
+/*# sourceMappingURL=estilos.css.map */

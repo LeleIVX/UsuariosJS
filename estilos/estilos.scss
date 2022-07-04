@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+$titulo: 'Creepster', cursive;
+$tamañotitulo: 40px;
+$colortitulo: #009473;
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: linear-gradient(to top, #009473, #008689, #007692, #21648b, #475177, #4e4969, #50425b, #4e3d4e, #4b3e4b, #483e48, #443f44, #413f41);
+    background-size: cover;
+    height: 100vh;
+}
+.titulo{
+    font-family: $titulo;
+    color: $colortitulo;
+    font-size: 70px;
+    -webkit-text-stroke: 2px #C9BAA4;
+}
+form{
+    font-family: 'Oswald', sans-serif;
+    color: white;
+        div{
+            padding: 5px;
+                label{
+                    font-size: 20px;
+                }
+        }
+}
+.btn{
+    background-color: #443f44;
+    border-color: $colortitulo;
+}
