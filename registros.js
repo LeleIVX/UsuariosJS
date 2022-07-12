@@ -1,6 +1,6 @@
 alert ("Bienvenidx al sitio");
 
-class usuario{
+class Usuario{
     constructor(id,user,nombre,apellido,mail,genero){
         this.id = id;
         this.user = user;
@@ -13,8 +13,9 @@ class usuario{
 
 let lista_usuarios = [];
 let registro= prompt("Querés registrarte? SI/NO");
+let cant_registros = prompt ("Cuantos usuarios querés registrar?");
 if (registro == "SI"){
-    for(i =0; i<10; i++){
+    for(i =0; i<cant_registros; i++){
         let id = i;
         let user = prompt("Ingrese su nombre de usuario");
         let nombre = prompt("Ingrese su nombre");
@@ -36,7 +37,7 @@ if (registro == "SI"){
 
 console.log (lista_usuarios);
 
-for(let usuario of lista_usuarios){
+/*for(let usuario of lista_usuarios){
     console.log ("ID ", usuario.id);
     console.log ("Usuario ", usuario.user);
     console.log ("Nombre ", usuario.nombre);
@@ -44,4 +45,11 @@ for(let usuario of lista_usuarios){
     console.log ("Mail ", usuario.mail);
     console.log ("Género ", usuario.genero);
     console.log ("--------------");
+}*/
+
+function buscar_usuario (usuario){
+    return usuario.user == prompt("Ingrese su usario")
 }
+
+let resultado_find = lista_usuarios.find(buscar_usuario);
+console.log ("Datos del usuario: ", resultado_find);
