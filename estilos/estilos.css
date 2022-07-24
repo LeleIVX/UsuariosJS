@@ -36,4 +36,21 @@ form div label {
   background-color: #443f44;
   border-color: #009473;
 }
+
+.bienvenida {
+  font-family: "Creepster", cursive;
+  color: #009473;
+  background-color: black;
+  height: 100vh;
+  font-size: 100px;
+  z-index: 1;
+  text-align: center;
+  -webkit-text-stroke: 2px #C9BAA4;
+}
+
+.btn_ingreso {
+  height: 100px;
+  width: 200px;
+  font-size: 50px;
+}
 /*# sourceMappingURL=estilos.css.map */

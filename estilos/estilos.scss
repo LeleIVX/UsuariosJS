@@ -7,6 +7,9 @@ $colortitulo: #009473;
     padding: 0;
     margin: 0;
 }
+
+
+
 body{
     background-image: linear-gradient(to top, #009473, #008689, #007692, #21648b, #475177, #4e4969, #50425b, #4e3d4e, #4b3e4b, #483e48, #443f44, #413f41);
     background-size: cover;
@@ -31,4 +34,20 @@ form{
 .btn{
     background-color: #443f44;
     border-color: $colortitulo;
+}
+.bienvenida{
+    font-family: $titulo;
+    color: $colortitulo;
+    background-color: black;
+    height: 100vh;
+    font-size: 100px;
+    z-index: 1;
+    text-align: center  ;
+    -webkit-text-stroke: 2px #C9BAA4;
+}
+.btn_ingreso{
+    height: 100px;
+    width: 200px;
+    font-size: 50px;
+    
 }

@@ -1,5 +1,3 @@
-alert ("Bienvenidx al sitio");
-
 class Usuario{
     constructor(user,nombre,apellido,mail,genero){
         this.user = user;
@@ -31,6 +29,13 @@ form_user.addEventListener("submit", function(e){
 
 
 console.log (lista_usuarios);
+
+let btn_ingreso = document.getElementsByClassName("btn_ingreso");
+
+btn_ingreso.addEventListener("click",function(){
+    console.log ("funciona")
+    let ingreso = document.getElementById("bienvenida")
+    ingreso.remove});
 
 /*
 function buscar_usuario (usuario){
