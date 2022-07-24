@@ -1,5 +1,6 @@
 class Usuario{
-    constructor(user,nombre,apellido,mail,genero){
+    constructor(id_usuario,user,nombre,apellido,mail,genero){
+        this.id_usuario = id_usuario;
         this.user = user;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -11,18 +12,29 @@ class Usuario{
 let registrarse = document.getElementById("registrarse")
 
 let lista_usuarios = [];
+var id=0
 
 form_user.addEventListener("submit", function(e){
-
+    
+    let id_user = document.getElementById("id_usuario");
+    id++;
+    console.log(id);
     e.preventDefault();
+    id_user.value=id
+    let id_usuario = id_user;
     let user = document.getElementById("username");
     let nombre = document.getElementById("nombre");
     let apellido = document.getElementById("apellido");
     let mail = document.getElementById("mail");
     let genero = document.getElementById("genero");
-
-    let nuevo_usuario = new Usuario (user.value, nombre.value, apellido.value, mail.value, genero.value);
+    let nuevo_usuario = new Usuario (id_usuario.value,user.value, nombre.value, apellido.value, mail.value, genero.value);
     lista_usuarios.push(nuevo_usuario);
+    let nuevo_usuarioJSON = JSON.stringify (nuevo_usuario);
+    localStorage.setItem(id,nuevo_usuarioJSON);
+    user.value="";
+    nombre.value="";
+    apellido.value="";
+    mail.value="";
 
 })
 
@@ -30,12 +42,11 @@ form_user.addEventListener("submit", function(e){
 
 console.log (lista_usuarios);
 
-let btn_ingreso = document.getElementsByClassName("btn_ingreso");
-
-btn_ingreso.addEventListener("click",function(){
+btn_ingreso.addEventListener("click", function(){
     console.log ("funciona")
     let ingreso = document.getElementById("bienvenida")
-    ingreso.remove});
+    ingreso.remove}
+    ) 
 
 /*
 function buscar_usuario (usuario){
