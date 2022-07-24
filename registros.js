@@ -43,9 +43,9 @@ form_user.addEventListener("submit", function(e){
 console.log (lista_usuarios);
 
 btn_ingreso.addEventListener("click", function(){
-    console.log ("funciona")
-    let ingreso = document.getElementById("bienvenida")
-    ingreso.remove}
+    console.log ("funciona");
+    let ingreso = document.getElementById("bienvenida");
+    ingreso.remove();}
     ) 
 
 /*
