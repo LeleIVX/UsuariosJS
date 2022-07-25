@@ -30,7 +30,8 @@ form_user.addEventListener("submit", function(e){
     let nuevo_usuario = new Usuario (id_usuario.value,user.value, nombre.value, apellido.value, mail.value, genero.value);
     lista_usuarios.push(nuevo_usuario);
     let nuevo_usuarioJSON = JSON.stringify (nuevo_usuario);
-    localStorage.setItem(id,nuevo_usuarioJSON);
+    let userJSON = JSON.stringify (user.value);
+    localStorage.setItem(userJSON,nuevo_usuarioJSON);
     user.value="";
     nombre.value="";
     apellido.value="";
@@ -43,10 +44,16 @@ form_user.addEventListener("submit", function(e){
 console.log (lista_usuarios);
 
 btn_ingreso.addEventListener("click", function(){
-    console.log ("funciona");
     let ingreso = document.getElementById("bienvenida");
     ingreso.remove();}
-    ) 
+    );
+
+/*let bnt_inicio = document.getElementById("iniciar_sesion");
+
+bnt_inicio.addEventListener("click",function(){
+    console.log("F")
+
+})*/
 
 /*
 function buscar_usuario (usuario){

@@ -13,7 +13,8 @@ $colortitulo: #009473;
 body{
     background-image: linear-gradient(to top, #009473, #008689, #007692, #21648b, #475177, #4e4969, #50425b, #4e3d4e, #4b3e4b, #483e48, #443f44, #413f41);
     background-size: cover;
-    height: 100vh;
+    height: 100%;
+    position: static;
 }
 .titulo{
     font-family: $titulo;
@@ -32,7 +33,6 @@ form{
         }
 }
 .btn{
-    background-color: #443f44;
     border-color: $colortitulo;
 }
 .bienvenida{
@@ -50,4 +50,21 @@ form{
     width: 200px;
     font-size: 50px;
     
+}
+.btn-sesion{
+    height: 25px;
+    justify-content: center;
+    align-self: center;
+}
+.inicio{
+    color: white;
+    font-family: 'Oswald', sans-serif;;
+}
+.link-inicio{
+    color: white;
+    justify-content: center;
+    align-self: center;
+}
+.b-ingreso{
+    height: 100vh;
 }

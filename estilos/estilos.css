@@ -9,7 +9,8 @@ body {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#009473), color-stop(#008689), color-stop(#007692), color-stop(#21648b), color-stop(#475177), color-stop(#4e4969), color-stop(#50425b), color-stop(#4e3d4e), color-stop(#4b3e4b), color-stop(#483e48), color-stop(#443f44), to(#413f41));
   background-image: linear-gradient(to top, #009473, #008689, #007692, #21648b, #475177, #4e4969, #50425b, #4e3d4e, #4b3e4b, #483e48, #443f44, #413f41);
   background-size: cover;
-  height: 100vh;
+  height: 100%;
+  position: static;
 }
 
 .titulo {
@@ -33,7 +34,6 @@ form div label {
 }
 
 .btn {
-  background-color: #443f44;
   border-color: #009473;
 }
 
@@ -52,5 +52,34 @@ form div label {
   height: 100px;
   width: 200px;
   font-size: 50px;
+}
+
+.btn-sesion {
+  height: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.inicio {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+}
+
+.link-inicio {
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.b-ingreso {
+  height: 100vh;
 }
 /*# sourceMappingURL=estilos.css.map */
