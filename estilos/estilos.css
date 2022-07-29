@@ -79,15 +79,15 @@ form div label {
       align-self: center;
 }
 
-.b-ingreso {
-  height: 100vh;
-}
-
 .tabla-usuario {
   width: 80%;
 }
 
 .tabla-usuario h2 {
   text-align: center;
+}
+
+.tabla-usuario h2 tr {
+  font-size: 30px;
 }
 /*# sourceMappingURL=estilos.css.map */

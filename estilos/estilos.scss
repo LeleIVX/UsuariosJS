@@ -65,12 +65,12 @@ form{
     justify-content: center;
     align-self: center;
 }
-.b-ingreso{
-    height: 100vh;
-}
 .tabla-usuario{
     width: 80%;
     h2{
         text-align: center;
+            tr{
+                font-size: 30px;
+            }
     }
 }
