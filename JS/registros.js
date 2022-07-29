@@ -28,8 +28,7 @@ form_user.addEventListener("submit", function(e){
     let nuevo_usuario = new Usuario (id_user.value,user.value, nombre.value, apellido.value, mail.value, genero.value);
     lista_usuarios.push(nuevo_usuario);
     let nuevo_usuarioJSON = JSON.stringify (nuevo_usuario);
-    let userJSON = JSON.stringify (user.value);
-    localStorage.setItem(userJSON,nuevo_usuarioJSON);
+    localStorage.setItem(user.value,nuevo_usuarioJSON);
     user.value="";
     nombre.value="";
     apellido.value="";

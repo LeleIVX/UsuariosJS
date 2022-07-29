@@ -82,4 +82,12 @@ form div label {
 .b-ingreso {
   height: 100vh;
 }
+
+.tabla-usuario {
+  width: 80%;
+}
+
+.tabla-usuario h2 {
+  text-align: center;
+}
 /*# sourceMappingURL=estilos.css.map */
