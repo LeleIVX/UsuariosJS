@@ -25,6 +25,16 @@ form_user.addEventListener("submit", function(e){
     let apellido = document.getElementById("apellido");
     let mail = document.getElementById("mail");
     let genero = document.getElementById("genero");
+    let validar = JSON.parse(localStorage.getItem(user.value));
+    if (user.value === validar.user){
+        Swal.fire({
+            icon: 'error',
+            title: 'Nombre de usuario no disponible',
+            text: 'El nombre de usuario ya se encuentra registrado',
+            footer: '<a href="./pages/iniciar_sesion.html">Ya te encontrás registrado? Inicia sesión</a>'
+        })
+    }
+    else{
     let nuevo_usuario = new Usuario (id_user.value,user.value, nombre.value, apellido.value, mail.value, genero.value);
     lista_usuarios.push(nuevo_usuario);
     let nuevo_usuarioJSON = JSON.stringify (nuevo_usuario);
@@ -32,18 +42,15 @@ form_user.addEventListener("submit", function(e){
     user.value="";
     nombre.value="";
     apellido.value="";
-    mail.value="";
+    mail.value="";}
 })
 
 
 
 console.log (lista_usuarios);
 
-let inicio = document.getElementById("btn_ingreso")
-
-inicio.addEventListener("click", function(){
-    let bienvenida = document.getElementById("bienvenida");
-    bienvenida.remove();
+$("#btn_ingreso").click(function(){
+    $("#bienvenida").hide();
 })
 
 
