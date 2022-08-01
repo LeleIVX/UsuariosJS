@@ -81,13 +81,15 @@ form div label {
 
 .tabla-usuario {
   width: 80%;
+  font-size: 20px;
+  color: #007692;
 }
 
 .tabla-usuario h2 {
   text-align: center;
 }
 
-.tabla-usuario h2 tr {
-  font-size: 30px;
+.volver_inicio a {
+  color: white;
 }
 /*# sourceMappingURL=estilos.css.map */
