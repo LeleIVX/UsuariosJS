@@ -26,6 +26,17 @@ form_user.addEventListener("submit", function(e){
     let mail = document.getElementById("mail");
     let genero = document.getElementById("genero");
     let validar = JSON.parse(localStorage.getItem(user.value));
+    if (validar == null){
+        
+        let nuevo_usuario = new Usuario (id_user.value,user.value, nombre.value, apellido.value, mail.value, genero.value);
+        lista_usuarios.push(nuevo_usuario);
+        let nuevo_usuarioJSON = JSON.stringify (nuevo_usuario);
+        localStorage.setItem(user.value,nuevo_usuarioJSON);
+        user.value="";
+        nombre.value="";
+        apellido.value="";
+        mail.value="";
+}
     if (user.value === validar.user){
         Swal.fire({
             icon: 'error',
@@ -34,6 +45,7 @@ form_user.addEventListener("submit", function(e){
             footer: '<a href="./pages/iniciar_sesion.html">Ya te encontrás registrado? Inicia sesión</a>'
         })
     }
+    
     else{
     let nuevo_usuario = new Usuario (id_user.value,user.value, nombre.value, apellido.value, mail.value, genero.value);
     lista_usuarios.push(nuevo_usuario);
@@ -42,8 +54,8 @@ form_user.addEventListener("submit", function(e){
     user.value="";
     nombre.value="";
     apellido.value="";
-    mail.value="";}
-})
+    mail.value="";
+}})
 
 
 
@@ -52,8 +64,3 @@ console.log (lista_usuarios);
 $("#btn_ingreso").click(function(){
     $("#bienvenida").hide();
 })
-
-
-
-
-
