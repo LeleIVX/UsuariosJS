@@ -13,19 +13,23 @@ let registrarse = document.getElementById("registrarse")
 
 let lista_usuarios = [];
 let id=0
+let id_user = document.getElementById ("id_usuario");
+let user = document.getElementById("username");
+let nombre = document.getElementById("nombre");
+let apellido = document.getElementById("apellido");
+let mail = document.getElementById("mail");
+let genero = document.getElementById("genero");
 
 form_user.addEventListener("submit", function(e){
-    
+    e.preventDefault();    
     id++;
-    e.preventDefault();
-    let id_user = document.getElementById ("id_usuario");
     id_user.value=id
-    let user = document.getElementById("username");
-    let nombre = document.getElementById("nombre");
-    let apellido = document.getElementById("apellido");
-    let mail = document.getElementById("mail");
-    let genero = document.getElementById("genero");
-    let validar = JSON.parse(localStorage.getItem(user.value));
+    fetch ("/usuarios.json")
+    .then (Response => Response.json())
+    .then (data => console.log(data));
+
+})
+    /*let validar = JSON.parse(localStorage.getItem(user.value));
     if (validar == null){
         
         let nuevo_usuario = new Usuario (id_user.value,user.value, nombre.value, apellido.value, mail.value, genero.value);
@@ -55,7 +59,7 @@ form_user.addEventListener("submit", function(e){
     nombre.value="";
     apellido.value="";
     mail.value="";
-}})
+}})*/
 
 
 
