@@ -1,0 +1,27 @@
+{"User":[
+    {
+        "id_user": 0,
+        "user": "LeleIVX",
+        "nombre": "Leandro",
+        "apellido": "Leiva",
+        "mail": "lele123@gmail.com",
+        "genero": "Masculino"
+    },
+    {
+        "id_user": 1,
+        "user" : "AstroBoy",
+        "nombre" : "Sebastian",
+        "apellido" : "Cano",
+        "mail" : "Sebas123@gmail.com",
+        "genero" : "Otrx"
+    },
+    {
+        "id_user": 2,
+        "user" : "MimiKat",
+        "nombre" : "Miriam",
+        "apellido" : "Juarez",
+        "mail" : "Mimi123@gmail.com",
+        "genero" : "Femenino"
+    }
+
+]}

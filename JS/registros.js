@@ -24,12 +24,17 @@ form_user.addEventListener("submit", function(e){
     e.preventDefault();    
     id++;
     id_user.value=id
-    fetch ("/usuarios.json")
-    .then (Response => Response.json())
-    .then (data => console.log(data));
+    let nuevo_usuario = new Usuario (id_user.value,user.value, nombre.value, apellido.value, mail.value, genero.value);
+    
+        lista_usuarios.push(nuevo_usuario);
+        let nuevo_usuarioJSON = JSON.stringify (nuevo_usuario);
+        localStorage.setItem(user.value,nuevo_usuarioJSON);
+        user.value="";
+        nombre.value="";
+        apellido.value="";
+        mail.value="";
 
-})
-    /*let validar = JSON.parse(localStorage.getItem(user.value));
+    let validar = JSON.parse(localStorage.getItem(user.value));
     if (validar == null){
         
         let nuevo_usuario = new Usuario (id_user.value,user.value, nombre.value, apellido.value, mail.value, genero.value);
@@ -59,7 +64,7 @@ form_user.addEventListener("submit", function(e){
     nombre.value="";
     apellido.value="";
     mail.value="";
-}})*/
+}})
 
 
 
